@@ -1,7 +1,41 @@
-# megaline_plans_ML
-Machine Learning first project 
-Mobile company Megaline is dissatisfied with the fact that many of its customers are using legacy plans. They want to develop a model that can analyze customer behavior and recommend one of Megaline's new plans: Smart or Ultra.
+# 🤖 Megaline Plans – Predictive Plan Recommendation with Machine Learning
+## 🔍 Project Functionality
+This project aims to support the telecom company Megaline in recommending optimal mobile plans to its users. Many customers are still on outdated plans, and the company wants to predict whether a user should switch to the "Smart" or "Ultra" plan, based on their behavior. A machine learning classification model was developed using customer usage data to automate and optimize this decision.
 
-You have access to behavioral data from subscribers who have already switched to the new plans (from the Statistical Data Analysis sprint project). For this classification task, you must create a model that chooses the correct plan. Since you've already completed the data processing step, you can jump right into creating the model.
+## 🛠️ Technologies and Methods
+Python with Scikit-learn, NumPy, Pandas
 
-Develop a model with the highest possible accuracy. In this project, the accuracy threshold is 0.75. Use the dataset to check the accuracy.
+**Classification models:**
+
+Decision Tree (optimized via max depth loop)
+
+Logistic Regression
+
+Random Forest (tuned with nested hyperparameter loop)
+
+**Model evaluation:**
+
+Accuracy score on training, validation, and test sets
+
+Sanity check on overfitting
+
+Accuracy target threshold: ≥ 0.75
+
+Target variable: is_ultra (1 = Ultra, 0 = Smart)
+
+Features used: calls, minutes, messages, mb_used
+
+## 📈 Key Findings and Conclusion
+Three models were trained and evaluated: Decision Tree, Logistic Regression, and Random Forest.
+
+The best-performing model was a Random Forest with:
+
+n_estimators = 50
+
+max_depth = 10
+
+Validation accuracy ≈ 88% and Test accuracy ≈ 78%
+
+The model exceeded the required performance threshold and passed sanity checks.
+
+**Recommendation:** Megaline should implement the Random Forest model to support customer transition to new plans. This model provides a robust and data-driven way to suggest the most suitable option based on user behavior.
